@@ -19,5 +19,10 @@ namespace Guia_5_Ejercicio_Parcial.Models
         {
             listaProductos.Add(unProducto);
         }
+        public bool QuitarProducto(int codigo)
+        {
+            bool eliminado= false;  
+
+        }
     }
 }
