@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guia_5_Ejercicio_Parcial.Models
 {
-    internal abstract class Producto
+    internal abstract class Producto:IComparable
     {
         protected double precioBase;
         protected double largo;
@@ -19,6 +19,16 @@ namespace Guia_5_Ejercicio_Parcial.Models
         }
         abstract public double Peso();
         abstract public double Precio();
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+            {
+                Producto compararProducto = obj as Producto;
+                return codigo.CompareTo(compararProducto.Codigo);
+            }
+            return 0;
+        }
 
     }
 }

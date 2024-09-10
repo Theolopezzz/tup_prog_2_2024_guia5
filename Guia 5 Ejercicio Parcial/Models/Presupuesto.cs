@@ -21,7 +21,23 @@ namespace Guia_5_Ejercicio_Parcial.Models
         }
         public bool QuitarProducto(int codigo)
         {
-            bool eliminado= false;  
+            bool eliminado = false;    
+            Producto producto = BuscarProducto(codigo);
+            if (producto != null)
+            {
+                listaProductos.Remove(producto);
+                eliminado = true;
+            }
+            return eliminado;
+        }
+        private Producto BuscarProducto(int codigo)
+        {
+            listaProductos.Sort();
+            int buscado=listaProductos.BinarySearch(codigo);
+            return listaProductos[buscado] as Producto;
+        } 
+        public string[] Resumen()
+        {
 
         }
     }
