@@ -22,13 +22,16 @@ namespace Guia_5_Ejercicio_Parcial.Models
 
         public int CompareTo(object obj)
         {
-            if (obj == null)
+            if (obj != null)
             {
                 Producto compararProducto = obj as Producto;
                 return codigo.CompareTo(compararProducto.Codigo);
             }
             return 0;
         }
-
+        public override string ToString()
+        {
+            return codigo.ToString(); 
+        }
     }
 }

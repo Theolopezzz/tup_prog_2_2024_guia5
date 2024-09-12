@@ -17,7 +17,7 @@ namespace Guia_5_Ejercicio_Parcial.Models
         }
         public override double Peso()
         {
-            return (largo * 0.25) * 0.3;
+            return largo * 0.25 * 0.3;
         }
         public override double Precio()
         {

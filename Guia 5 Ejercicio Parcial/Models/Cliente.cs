@@ -17,7 +17,7 @@ namespace Guia_5_Ejercicio_Parcial.Models
         }
         public string ToString()
         {
-            return $"Nombre: {nombre} \nDirección: {direccion}";
+            return $"Nombre: {nombre} \n\rDirección: {direccion}";
         }
     }
 }
